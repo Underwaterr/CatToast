@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: black;
+    width: 250px;
+    height: 100%;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    text-align: left;
+}
+nav a {
+    color: white;
+}
+
+main {
+    left: 250px;
+    top: 0;
+    margin-left: 250px;
+    padding: 50px;
+    max-width: 800px;
+}
+
+main p:first-child {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 1.2em;
+    margin: 1.6rem 0 0;
+}
+
+main p {
+    margin: 1.6rem 0 0;
+    line-height: 1.6em;
+}
+
+blockquote {
+    border-left: 5px solid black;
+    padding: 1em 1.5em
+}
+
+time {
+    display: inline-block;
+    margin: 0 0 5px;
+    font-size: 15px;
+    color: #9EABB3;
+}
+
+#cat-friend {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    z-index: -1;
+
+    background-image: url("img/cat-friend.jpg");
+    width: 864px;
+    height: 506px;
+}
+
+#cat-toast {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    height: 150px;
+}
+
+#disqus_thread {
+    margin-left: 250px;
+    max-width: 100%;
+    background-color: white;
+    border-top: 2px solid black;
+    padding: 20px;
+}
