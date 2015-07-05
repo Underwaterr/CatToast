@@ -7,6 +7,7 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById("main").innerHTML = markdown.render(renderedText);
 };
 
+// Fresh
 var getHash = function() {
     var hash = (location.hash).replace("#!", "");
     hash = (hash == "" ? "home" : hash);
@@ -17,8 +18,9 @@ var getHash = function() {
 var getContent = function() {
     xmlhttp.open("GET", "markdown-pages/" + getHash() + ".md", true);
     xmlhttp.send();
+    reset(getHash(), location.href, getHash());
 };
 
 // Dank
-getContent();
+window.onload = getContent;
 window.onhashchange = getContent;

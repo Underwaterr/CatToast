@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-size: 18px;
@@ -8,10 +9,10 @@ header {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: black;
-    width: 250px;
+    background-color: #1570A6;
+    width: 300px;
     height: 100%;
-    padding-top: 50px;
+    padding-top: 35px;
     color: white;
     text-align: center;
 }
@@ -19,20 +20,37 @@ header {
 nav {
     text-align: left;
 }
+
+nav ul {
+    padding: 0 25px;
+    list-style-type: none;
+    margin: 0.5em;
+    font-size: 1em;
+}
+
 nav a {
     color: white;
 }
 
 main {
-    left: 250px;
-    top: 0;
-    margin-left: 250px;
-    padding: 50px;
+    margin-left: 300px;
     max-width: 800px;
+}
+
+article {
+    padding: 50px;
+    background-image: url("img/cat-friend.jpg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 50%;
 }
 
 main p:first-child {
     margin-top: 0;
+}
+
+h1, h2, h3 {
+    color: #1570A6;
 }
 
 h1 {
@@ -46,13 +64,17 @@ h2 {
     margin: 1.6rem 0 0;
 }
 
+p, main ul {
+    font-family: "Courier New", Courier, monospace;
+}
+
 main p {
     margin: 1.6rem 0 0;
     line-height: 1.6em;
 }
 
 blockquote {
-    border-left: 5px solid black;
+    border-left: 5px solid #1570A6;
     padding: 1em 1.5em
 }
 
@@ -63,6 +85,24 @@ time {
     color: #9EABB3;
 }
 
+@media all and (max-width:900px) {
+    header {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        box-sizing:border-box;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+
 #cat-friend {
     position: fixed;
     right: 0;
@@ -71,21 +111,48 @@ time {
     z-index: -1;
 
     background-image: url("img/cat-friend.jpg");
-    width: 864px;
-    height: 506px;
+    background-size: 100%;
+/*    width: 864px;
+    height: 506px; */
 }
 
 #cat-toast {
+    background-image: url('img/cat-toast.svg');
+    background-size: 100%;
+    width: 180px;
+    height: 200px;
     display: block;
     margin: 0 auto;
-    width: 130px;
-    height: 150px;
+}
+
+#site-name {
+    font-size: 32px;
+    margin: 0.1em;
 }
 
 #disqus_thread {
-    margin-left: 250px;
     max-width: 100%;
     background-color: white;
-    border-top: 2px solid black;
+    border-top: 2px solid rgba(0, 39, 59, 0.08);
     padding: 20px;
+}
+
+.dsq-brlink {
+    margin-left: 260px;
+}
+
+html.meow {
+    background: url("img/me.jpg") no-repeat center bottom fixed;
+    background-size: cover;
+}
+
+#title {
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
 }
