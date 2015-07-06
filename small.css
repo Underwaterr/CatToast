@@ -34,11 +34,11 @@ nav a {
 
 main {
     margin-left: 300px;
-    max-width: 800px;
 }
 
 article {
     padding: 50px;
+    min-height: 250px;
     background-image: url("img/cat-friend.jpg");
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -64,7 +64,7 @@ h2 {
     margin: 1.6rem 0 0;
 }
 
-p, main ul {
+p, main ul, main ol {
     font-family: "Courier New", Courier, monospace;
 }
 
@@ -128,6 +128,11 @@ time {
 #site-name {
     font-size: 32px;
     margin: 0.1em;
+    color: white;
+}
+
+a #site-name p {
+    text-decoration: none;
 }
 
 #disqus_thread {
