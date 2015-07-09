@@ -21,6 +21,12 @@ var getContent = function() {
     xmlhttp.send();
 };
 
+// Word
+var checkHash = function(callback) {
+    if (location.hash.indexOf("#!") !== -1)
+        callback();
+};
+
 // Dank
 window.onload = getContent;
-window.onhashchange = getContent;
+window.onhashchange = checkHash(getContent);
