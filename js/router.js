@@ -5,7 +5,8 @@ xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     var renderedText = markdown.render(xmlhttp.status == 404 ? "# Page Not Found!" : xmlhttp.responseText);
     document.getElementById("main").innerHTML = markdown.render(renderedText);
-    reset(getHash(), location.href, getHash());
+    if (typeof(reset) != "undefined")
+        reset(getHash(), location.href, getHash());
 };
 
 // Fresh
@@ -29,4 +30,4 @@ var checkHash = function(callback) {
 
 // Dank
 window.onload = getContent;
-window.onhashchange = checkHash(getContent);
+window.onhashchange = getContent;

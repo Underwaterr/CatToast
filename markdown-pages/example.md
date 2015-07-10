@@ -100,7 +100,7 @@ doc](#an-h2-header). Here's a footnote [^1].
 [^1]: Footnote text goes here.
 and images can be specified like so:
 
-![example image](cat-friend.jpg "An exemplary image")
+![example image](img/cat-friend.jpg "An exemplary image")
 
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.

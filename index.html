@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html class="meow">
+<html>
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="small.css">
+    <link rel="stylesheet" type="text/css" href="css/small.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 <body>
 
@@ -14,16 +15,24 @@
     </a>
     <nav>
         <ul>
-            <li><a href="#">About Me</a></li>
-            <li><a href="https://twitter.com/tylerlanecodes">@tylerlanecodes</a></li>
-            <li><a href="https://github.com/Underwaterr">GitHub</a></li>
-            <li><a href="article.html#!home">Blog</a></li>
+            <li><i class="fa fa-camera-retro fa-fw"></i> <a href="#!about-me">                          About Me</a></li>
+            <li><i class="fa fa-twitter      fa-fw"></i> <a href="https://twitter.com/tylerlanecodes">  @tylerlanecodes</a></li>
+            <li><i class="fa fa-github       fa-fw"></i> <a href="https://github.com/Underwaterr">      GitHub</a></li>
+        </ul>
+        <h4>Blog Posts</h4>
+        <ul>
+            <li><a href="article.html#!home">Home</a></li>
+            <li><a href="article.html#!example">Example</a></li>
+            <li><a href="#article.html!blarg">Blarg!</a></li>
         </ul>
     </nav>
 </header>
 
-<img id="cat-friend">
+<main>
+    <article id="main"></article>
+</main>
 
+<script type="text/javascript" src="js/remarkable.js"></script>
 <script type="text/javascript" src="js/router.js"></script>
 </body>
 </html>
