@@ -8,32 +8,40 @@
 </head>
 <body>
 
-<header>
-    <a href="index.html" style="text-decoration: none;">
-        <div id="cat-toast"></div>
-        <p id="site-name">cat-toast.com</p>
-    </a>
-    <nav>
-        <ul>
-            <li><i class="fa fa-camera-retro fa-fw"></i> <a href="index.html#!about-me">                About Me</a></li>
-            <li><i class="fa fa-twitter      fa-fw"></i> <a href="https://twitter.com/tylerlanecodes">  @tylerlanecodes</a></li>
-            <li><i class="fa fa-github       fa-fw"></i> <a href="https://github.com/Underwaterr">      GitHub</a></li>
-        </ul>
-        <h4>Blog Posts</h4>
-        <ul>
-            <li><a href="#!home">Home</a></li>
-            <li><a href="#!example">Example</a></li>
-            <li><a href="#!blarg">Blarg!</a></li>
-        </ul>
-    </nav>
-</header>
+<div id="header"></div>
+
+<script id="header-template" type="text/x-handlebars-template">
+    <header>
+        <a href="index.html" style="text-decoration: none;">
+            <div id="cat-toast"></div>
+            <p id="site-name">cat-toast.com</p>
+        </a>
+        <nav>
+            <ul>
+                <li><i class="fa fa-camera-retro fa-fw"></i> <a href="index.html#!about-me">                About Me</a></li>
+                <li><i class="fa fa-twitter      fa-fw"></i> <a href="https://twitter.com/tylerlanecodes">  Twitter</a></li>
+                <li><i class="fa fa-github       fa-fw"></i> <a href="https://github.com/Underwaterr">      GitHub</a></li>
+                <li><i class="fa fa-linkedin     fa-fw"></i> <a href="https://www.linkedin.com/in/tclane">  LinkedIn</a></li>
+
+            </ul>
+            <h4>Blog Posts</h4>
+            <ul>
+                {{#articles}}
+                    <li><a href="#!{{ref}}">{{title}}</a></li>
+                {{/articles}}
+            </ul>
+        </nav>
+    </header>
+</script>
 
 <main>
     <article id="main"></article>
     <div id="disqus_thread"></div>
 </main>
 
-<script type="text/javascript" src="js/remarkable.js"></script>
+<script type="text/javascript" src="js/handlebars.min.js"></script>
+<script type="text/javascript" src="js/header-template.js"></script>
+<script type="text/javascript" src="js/remarkable.min.js"></script>
 <script type="text/javascript" src="js/router.js"></script>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

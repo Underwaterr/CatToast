@@ -3,7 +3,7 @@ var markdown  = new Remarkable({ html: true });
 // Dat AJAX tho
 xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
-    var renderedText = markdown.render(xmlhttp.status == 404 ? "# Page Not Found!" : xmlhttp.responseText);
+    var renderedText = markdown.render(xmlhttp.status == 404 ? "# Page Not Found :(" : xmlhttp.responseText);
     document.getElementById("main").innerHTML = markdown.render(renderedText);
     if (typeof(reset) != "undefined")
         reset(getHash(), location.href, getHash());
@@ -12,7 +12,7 @@ xmlhttp.onreadystatechange = function() {
 // Fresh
 var getHash = function() {
     var hash = (location.hash).replace("#!", "");
-    hash = (hash == "" ? "home" : hash);
+    hash = (hash == "" ? "default" : hash);
     return hash;
 };
 
@@ -20,12 +20,6 @@ var getHash = function() {
 var getContent = function() {
     xmlhttp.open("GET", "markdown-pages/" + getHash() + ".md", true);
     xmlhttp.send();
-};
-
-// Word
-var checkHash = function(callback) {
-    if (location.hash.indexOf("#!") !== -1)
-        callback();
 };
 
 // Dank
