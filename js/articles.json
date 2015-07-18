@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "title": "Example",
+      "summary": "This is just an example.",
+      "ref": "example",
+      "date": "January 3rd, 2014",
+      "tags": [ "tag", "tag2", "tag3" ]
+    },
+    {
+      "title": "Maestroooo",
+      "summary": "Can't stop thinkin bout Maestro.",
+      "ref": "blarg",
+      "date": "July 4th, 2015",
+      "tags": [ "tag", "tag2", "tag3" ]
+    },
+    {
+      "title": "Home :O",
+      "summary": "This isn't really home at all!.",
+      "ref": "home",
+      "date": "July 10th, 2015",
+      "tags": [ "tag2", "tag4" ]
+    }
+  ]
+}

@@ -11,15 +11,17 @@ xmlhttp.onreadystatechange = function() {
 
 // Fresh
 var getHash = function() {
-    var hash = (location.hash).replace("#!", "");
-    hash = (hash == "" ? "default" : hash);
-    return hash;
+    return (location.hash).replace("#!", "");
 };
 
 // Get it, son
 var getContent = function() {
-    xmlhttp.open("GET", "markdown-pages/" + getHash() + ".md", true);
-    xmlhttp.send();
+    var hash = getHash();
+    if (hash !== "" )
+    {
+        xmlhttp.open("GET", "markdown-pages/" + hash + ".md", true);
+        xmlhttp.send();
+    }
 };
 
 // Dank

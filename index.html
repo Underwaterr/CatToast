@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/small.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -22,7 +23,6 @@
                 <li><i class="fa fa-twitter      fa-fw"></i> <a href="https://twitter.com/tylerlanecodes">  Twitter</a></li>
                 <li><i class="fa fa-github       fa-fw"></i> <a href="https://github.com/Underwaterr">      GitHub</a></li>
                 <li><i class="fa fa-linkedin     fa-fw"></i> <a href="https://www.linkedin.com/in/tclane">  LinkedIn</a></li>
-
             </ul>
             <h4>Blog Posts</h4>
             <ul>
@@ -35,30 +35,26 @@
 </script>
 
 <main>
-    <article id="main"></article>
+    <article id="main">
+        <img src="img/stars.png" class="pulse">
+        <br>
+        <p>Loading...</p>
+    </article>
 </main>
 
+<script id="index-template" type="text/x-handlebars-template">
+    <h1>Cat Toast!</h1>
+    {{#articles}}
+        <h3 style="display: inline-block;">{{title}}</h3>&nbsp;<time>{{date}}</time>
+        <p style="margin-top: 0; margin-bottom: 1em;"><a href="article.html#!{{ref}}">{{summary}}</a></p>
+        <br>
+    {{/articles}}
+</script>
+
 <script type="text/javascript" src="js/handlebars.min.js"></script>
-<script type="text/javascript" src="js/header-template.js"></script>
+<script type="text/javascript" src="js/renderer.js"></script>
 <script type="text/javascript" src="js/remarkable.min.js"></script>
 <script type="text/javascript" src="js/router.js"></script>
-
-<div id="index"></div>
-
-<script id="directory-template" type="text/x-handlebars-template">
-    <ul>
-        {{#articles}}
-        <li>{{title}}</li>
-        {{/articles}}
-    </ul>
-</script>
-
-<script type="text/javascript">
-    var headerSource = document.getElementById("directory-template").innerHTML;
-    var headerTemplate = Handlebars.compile(headerSource);
-    var headerOutput = headerTemplate(headerData);
-    document.getElementById("index").innerHTML = headerOutput;
-</script>
 
 </body>
 </html>
